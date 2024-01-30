@@ -24,9 +24,26 @@
 
   gtag('config', 'G-6YEQ7Q0XRC');
 </script>
+  <script>
+      var loginValue = localStorage.getItem('login');
+
+if (loginValue === 'enablelogin') {
+    var isLoggedIn = localStorage.getItem('pass');
+
+    if (isLoggedIn === 'correct') {
+        console.log("User has successfully logged in.");
+    } else {
+        console.log('User has attempted to bypass login screen. Redirecting.');
+        location.href = '/';
+    }
+} else {
+    console.log("Login is not enabled.");
+}
+  </script>
 </head>
 <br>
 <body>
+  <div id="particles-js"></div>
   <nav id="mytopnav">
 <a href="/settings.html"><button class="button-6"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
   <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
