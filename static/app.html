@@ -40,10 +40,25 @@ if (loginValue === 'enablelogin') {
     console.log("Login is not enabled.");
 }
   </script>
+  <title>Doge | V4</title>
 </head>
 <br>
 <body>
   <div id="particles-js"></div>
+  <div id="contextMenu" class="context-menu">
+    <div class="context-menu-item with-submenu" onclick="toggleSubmenu(event)"><i class="bi bi-backpack"></i> Tab Cloak</div>
+    <div class="context-submenu">
+      <div class="context-menu-item" onclick="tabCloak()">Enable</div>
+      <div class="context-menu-item" onclick="disableTabCloak()">Disable</div>
+    </div>
+    <div class="context-menu-item with-submenu" onclick="toggleSubmenu2(event)"><i class="bi bi-shield-lock"></i> Authentication</div>
+    <div class="context-submenu">
+      <div class="context-menu-item" onclick="enableLogin()">Enable Login</div>
+      <div class="context-menu-item" onclick="disableLogin()">Disable Login</div>
+    </div>
+    <div class="context-menu-item" onclick="openWindow()"><i class="bi bi-box-arrow-up-right"></i> About:Blank Cloak</div>
+    <div class="context-menu-item" onclick="openSettings()"><i class="bi bi-gear"></i> View all Settings</div>
+  </div>
   <nav id="mytopnav">
 <a href="/settings.html"><button class="button-6"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
   <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
